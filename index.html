@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Huang - Computer Science Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Song Huang</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="highlight">Song Huang</span>
+                </h1>
+                <h2 class="hero-subtitle">Computer Science Graduate | University of Alberta</h2>
+                <p class="hero-description">
+                    Passionate about software development, algorithms, and creating innovative solutions. 
+                    Ready to make an impact in the tech industry.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a Computer Science graduate from the University of Alberta with a minor in Philosophy. 
+                        I have a passion for full-stack development, game development, and creating innovative solutions 
+                        that enhance accessibility and user engagement.
+                    </p>
+                    <p>
+                        During my studies, I've worked on diverse projects ranging from Indigenous language resource 
+                        platforms to social media integration tools and 2D puzzle games. I enjoy tackling complex 
+                        challenges and turning ideas into reality through code, with a focus on user-centered design 
+                        and accessibility principles.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>4+</h3>
+                            <p>Notable Projects</p>
+                        </div>
+                        <div class="stat">
+                            <h3>8+</h3>
+                            <p>Programming Languages</p>
+                        </div>
+                        <div class="stat">
+                            <h3>5+</h3>
+                            <p>Years of Study</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-code"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Semantic Explorer</h3>
+                        <p>Full stack development of a website for the Alberta Language Technology Laboratory to explore semantic information of the Plains Cree dictionary, enhancing engagement and accessibility of Indigenous language resources. Implemented CRAP design principles and Nielsen's Heuristics.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Full Stack</span>
+                            <span class="tech-tag">CRAP Principles</span>
+                            <span class="tech-tag">Accessibility</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/UAlberta-CMPUT401/vocabulary-explorer" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Social Distribution</h3>
+                        <p>Full stack development of a website that aims to connect different social media platforms. Used APIs to create various social media features such as likes, comments, and sharing on posts that are functional across different platforms.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Full Stack</span>
+                            <span class="tech-tag">APIs</span>
+                            <span class="tech-tag">Social Media</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/kbricker8/cmput404-group-project" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Descent Into Amphora</h3>
+                        <p>Developed a 2D puzzle game with RPGMaker that received positive feedback from players for its innovative mechanics and engaging storyline. Collaborated with artists to create immersive environments and captivating soundtracks.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">RPGMaker</span>
+                            <span class="tech-tag">Game Development</span>
+                            <span class="tech-tag">2D Design</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/PygmySquashStudios/PygmySquashStudiosGame" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://pygmysquashstudios.github.io/PygmySquashStudiosGame/GOLD_WEB/www" class="project-link"><i class="fas fa-external-link-alt"></i> Play Game</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-qrcode"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>QR Hunter</h3>
+                        <p>Collaborated with other students to create a geocaching-esque QR scanning game with the implementation of a Google Maps API. Features location-based QR code discovery and interactive gameplay.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Google Maps API</span>
+                            <span class="tech-tag">QR Code</span>
+                            <span class="tech-tag">Geocaching</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/CMPUT301W22T12/QRHunter" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-content">
+                <div class="skills-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">C++</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">C</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">C#</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3>Technologies & Frameworks</h3>
+                    <div class="skills-grid">
+                        <div class="skill-tag">React</div>
+                        <div class="skill-tag">Node.js</div>
+                        <div class="skill-tag">Django</div>
+                        <div class="skill-tag">REST</div>
+                        <div class="skill-tag">SQL</div>
+                        <div class="skill-tag">SQLite</div>
+                        <div class="skill-tag">MySQL</div>
+                        <div class="skill-tag">Docker</div>
+                        <div class="skill-tag">AWS</div>
+                        <div class="skill-tag">GitHub</div>
+                        <div class="skill-tag">Linux</div>
+                        <div class="skill-tag">CSS</div>
+                        <div class="skill-tag">UI/UX</div>
+                        <div class="skill-tag">APIs</div>
+                        <div class="skill-tag">RPGMaker</div>
+                        <div class="skill-tag">Game Development</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always interested in new opportunities and exciting projects. Feel free to reach out!</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>jadenhuang2001@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(403) 426-0177</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Sundre, AB</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Song Huang. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
