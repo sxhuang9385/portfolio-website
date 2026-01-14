@@ -147,19 +147,19 @@ if (contactForm) {
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
         
-        // Send email using EmailJS
-        emailjs.sendForm('service_lyudjhh', 'template_255sgib', contactForm)
-            .then(() => {
-                alert('Thank you for your message! I\'ll get back to you soon.');
-                contactForm.reset();
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            }, (error) => {
-                console.error('EmailJS Error:', error);
-                alert('Sorry, there was an error sending your message. Please try again or contact me directly at jadenhuang2001@gmail.com');
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            });
+            // Send email using EmailJS
+            emailjs.sendForm('service_lyudjhh', 'template_255sgib', contactForm)
+                .then(() => {
+                    alert('Thank you for your message! -Song Huang\nI\'ll get back to you soon.');
+                    contactForm.reset();
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }, (error) => {
+                    console.error('EmailJS Error:', error);
+                    alert('Sorry, there was an error sending your message. Please try again or contact Song Huang directly at jadenhuang2001@gmail.com');
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                });
     });
 }
 
