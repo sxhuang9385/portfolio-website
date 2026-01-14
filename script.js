@@ -109,46 +109,24 @@ document.addEventListener('DOMContentLoaded', () => {
 // Skill bars animation on scroll
 window.addEventListener('scroll', animateSkillBars);
 
-// Typing animation for hero title
-const typeWriter = (element, text, speed = 100) => {
-    let i = 0;
-    element.innerHTML = '';
-    
-    const timer = setInterval(() => {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-        } else {
-            clearInterval(timer);
-        }
-    }, speed);
-};
+// Typing animation removed - was causing HTML to display as text
 
-// Initialize typing animation when page loads
-document.addEventListener('DOMContentLoaded', () => {
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        const originalText = heroTitle.innerHTML;
-        // Only run typing animation on first visit
-        if (!sessionStorage.getItem('visited')) {
-            typeWriter(heroTitle, originalText, 50);
-            sessionStorage.setItem('visited', 'true');
-        }
-    }
-});
+// Initialize EmailJS
+(function() {
+    emailjs.init("it27HIvrETzs9Z52b");
+})();
 
 // Form submission handling
-const contactForm = document.querySelector('.contact-form form');
+const contactForm = document.getElementById('contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
         // Get form data
-        const formData = new FormData(contactForm);
-        const name = contactForm.querySelector('input[type="text"]').value;
-        const email = contactForm.querySelector('input[type="email"]').value;
-        const subject = contactForm.querySelectorAll('input[type="text"]')[1].value;
-        const message = contactForm.querySelector('textarea').value;
+        const name = contactForm.querySelector('input[name="user_name"]').value;
+        const email = contactForm.querySelector('input[name="user_email"]').value;
+        const subject = contactForm.querySelector('input[name="subject"]').value;
+        const message = contactForm.querySelector('textarea[name="message"]').value;
         
         // Simple validation
         if (!name || !email || !subject || !message) {
@@ -163,18 +141,25 @@ if (contactForm) {
             return;
         }
         
-        // Simulate form submission
+        // Get submit button
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
         
-        setTimeout(() => {
-            alert('Thank you for your message! I\'ll get back to you soon.');
-            contactForm.reset();
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-        }, 2000);
+        // Send email using EmailJS
+        emailjs.sendForm('service_lyudjhh', 'template_255sgib', contactForm)
+            .then(() => {
+                alert('Thank you for your message! I\'ll get back to you soon.');
+                contactForm.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, (error) => {
+                console.error('EmailJS Error:', error);
+                alert('Sorry, there was an error sending your message. Please try again or contact me directly at jadenhuang2001@gmail.com');
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
     });
 }
 
